@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.menuController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@beansss.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.1" saturation="0.5" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="569.0" layoutY="1.0" text="Menu" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font></Label>
+      <TableView fx:id="menuTable" layoutY="37.0" prefHeight="307.0" prefWidth="1200.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="hotCoffeeColumn" prefWidth="300.0" text="Hot Coffee" />
+          <TableColumn fx:id="coldCoffeeColumn" prefWidth="300.0" text="Cold Coffee" />
+            <TableColumn fx:id="hotDrinkColumn" prefWidth="300.0" text="Hot Drinks" />
+            <TableColumn fx:id="coldDrinkColumn" prefWidth="305.0" text="Cold Drinks" />
+        </columns>
+      </TableView>
+      <Button layoutY="344.0" mnemonicParsing="false" onAction="#orderButtonPressed" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #2f2f2fa3; -fx-border-color: white;" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button layoutX="600.0" layoutY="344.0" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: #2f2f2fa3; -fx-border-color: white;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font></Button>
+   </children>
+</Pane>
