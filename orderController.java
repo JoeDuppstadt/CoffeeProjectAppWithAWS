@@ -307,7 +307,7 @@ public class orderController {
                     }
                 }
                 SendMessageRequest send_msg_request = new SendMessageRequest()
-                        .withQueueUrl("https://sqs.us-east-2.amazonaws.com/271028247314/TestQueue")
+                        .withQueueUrl("https://sqs.us-east-2.amazonaws.com/amazonMadeMeTakeTheIDOut/TestQueue") // you can make a simple sqs queue to test this
                         .withMessageBody(orderBuilder);
                 //.withDelaySeconds(5)
 
