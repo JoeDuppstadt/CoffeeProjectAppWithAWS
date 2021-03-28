@@ -49,7 +49,7 @@ public class workerController extends Observer{
 
     private String price, flavor, sugar, expresso, milkChoice, drink = "", time;
     private ObservableList<Drink> drinkOrderList = FXCollections.observableArrayList();
-    private String url = "https://sqs.us-east-2.amazonaws.com/271028247314/TestQueue";
+    private String url = "https://sqs.us-east-2.amazonaws.com/AmazonMadeMeRemoveTheID/TestQueue"; // make a new sqs queue to test
     ThreadedSingletonSubject updater;
     Thread t1;
 
@@ -85,7 +85,7 @@ public class workerController extends Observer{
 
         // repopulate the queue
         SendMessageRequest send_msg_request = new SendMessageRequest()
-                .withQueueUrl("https://sqs.us-east-2.amazonaws.com/271028247314/TestQueue")
+                .withQueueUrl("https://sqs.us-east-2.amazonaws.com/AmazonMadeMeRemoveTheID/TestQueue")
                 .withMessageBody(tableBuilder);
 
         SendMessageResult result = sqs.sendMessage(send_msg_request);
